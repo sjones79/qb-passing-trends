@@ -1,0 +1,153 @@
+<!-- most passing yards -->
+<div class="col-md-3 col-xs-12 widget widget_tally_box">
+    <div class="x_panel fixed_height_390">
+        <div class="x_content">
+
+            <div class="flex">
+                <ul class="list-inline widget_profile_box">
+                    <li>
+                        <img ng-src="{{maxPassYdsGame.teamImage}}">
+                    </li>
+                    <li>
+                        <img ng-src="{{maxPassYdsGame.playerImage}}" alt="..." class="img-circle profile_img">
+                    </li>
+                    <li>
+                        <img ng-src="{{maxPassYdsGame.opponentImage}}">
+                    </li>
+                </ul>
+            </div>
+
+            <h1 class="count name">{{maxPassYdsGame.PsYds}}</h1>
+            <h4 class="name">Most Passing Yards</h4>
+
+            <div class="flex">
+                <ul class="list-inline count2">
+                    <li>
+                        <span>Week</span>
+                        <h2>{{maxPassYdsGame.week}}</h2>
+                    </li>
+                    <li>
+                        <span>Against</span>
+                        <h2>{{maxPassYdsGame.opponent}}</h2>
+                    </li>
+                    <li>
+                        <span>Game Day</span>
+                        <h2>{{ maxPassYdsGame.gameDate| hrDate }}</h2>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /most passing yards -->
+<!--  most passing touchdowns -->
+<div class="col-md-3 col-xs-12 widget widget_tally_box">
+    <div class="x_panel fixed_height_390">
+        <div class="x_content">
+
+            <div class="flex">
+                <ul class="list-inline widget_profile_box">
+                    <li>
+                        <img ng-src="{{maxPassTdsGame.teamImage}}">
+                    </li>
+                    <li>
+                        <img ng-src="{{maxPassTdsGame.playerImage}}" alt="..." class="img-circle profile_img">
+                    </li>
+                    <li>
+                        <img ng-src="{{maxPassTdsGame.opponentImage}}">
+                    </li>
+                </ul>
+            </div>
+
+            <h1 class="count name">{{maxPassTdsGame.PsTD}}</h1>
+            <h4 class="name">Most Passing Touchdowns</h4>
+
+            <div class="flex">
+                <ul class="list-inline count2">
+                    <li>
+                        <span>Week</span>
+                        <h2>{{maxPassTdsGame.week}}</h2>
+                    </li>
+                    <li>
+                        <span>Against</span>
+                        <h2>{{maxPassTdsGame.opponent}}</h2>
+                    </li>
+                    <li>
+                        <span>Game Day</span>
+                        <h2>{{ maxPassTdsGame.gameDate | hrDate }}</h2>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /most passing touchdowns -->
+<!-- All Time Totals -->
+<div class="col-md-6 col-sm-6 col-xs-12">
+    <div class="x_title">
+        <h2>All Time Totals</h2>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+        <div class="row">
+            <div class="animated flipInY col-md-6">
+                <div class="tile-stats">
+                    <div class="icon"><i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="count">{{allTimeTotals.totalCmpPct}}%</div>
+
+                    <h3>Total Completion Percentage</h3>
+                </div>
+            </div>
+            <div class="animated flipInY col-md-6">
+                <div class="tile-stats">
+                    <div class="icon"><i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="count">{{allTimeTotals.totalCompletions}}</div>
+
+                    <h3>Total Completions</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="animated flipInY col-md-6">
+                <div class="tile-stats">
+                    <div class="icon"><i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="count">{{allTimeTotals.totalAttempts}}</div>
+
+                    <h3>Total Attempts</h3>
+                </div>
+            </div>
+            <div class="animated flipInY col-md-6">
+                <div class="tile-stats">
+                    <div class="icon"><i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="count">{{allTimeTotals.totalPassYds}}</div>
+
+                    <h3>Total Passing Yards</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="animated flipInY col-md-6">
+                <div class="tile-stats">
+                    <div class="icon"><i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="count">{{allTimeTotals.totalRushingYds}}</div>
+
+                    <h3>Total Rushing Yards</h3>
+                </div>
+            </div>
+            <div class="animated flipInY col-md-6">
+                <div class="tile-stats">
+                    <div class="icon"><i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="count">{{allTimeTotals.totalRushingTds}}</div>
+
+                    <h3>Total Rushing Touchdowns</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
