@@ -11,6 +11,6 @@ angular.module('qbPassTrends')
   .directive('topTiles', function() {
     return {
         restrict: 'E',
-        templateUrl: '/views/partials/topTiles.html'
+        templateUrl: 'views/partials/topTiles.html'
     };
   });
