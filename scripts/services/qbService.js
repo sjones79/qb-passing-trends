@@ -54,7 +54,7 @@ angular.module('qbPassTrends').factory('qbService', ['$http', '$filter',
                     
                     if (!this.isEmpty(qbId)) {
                         var qbFile = 'nfl-'+qbId+'.json';
-                        var fullDataPath = '/data/'+qbFile;
+                        var fullDataPath = 'data/'+qbFile;
                         
                          return $http.get(fullDataPath)
                              .success(function(data) {
