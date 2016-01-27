@@ -8,16 +8,6 @@
  * Service of qbPassTrends
  */
 
-/*TODO Ways to improve the code
-1. Remove all of the get<>Totals calls and create a single function<getStatTotals> that can iteratively call 
-   the qbService.sum function taking the qbStats object list and the statType as a parameter.
-   Store the result of each call in a new object parameter statTotal[Att] = getStatTotals(qbStats, 'Att');
-   Return the statTotal obj to the controller;
-2.  Try/Catch blocks with an errorHandling Service   
-
-*/
-
-
 angular.module('qbPassTrends').factory('qbService', ['$http', '$filter',
         function ($http, $filter) {
             
@@ -51,7 +41,6 @@ angular.module('qbPassTrends').factory('qbService', ['$http', '$filter',
                 
                 sum: function (qbStats, statType){
                     if(!this.isEmpty(qbStats) && !this.isEmpty(statType)){
-                        //TODO be able to describe this functionality
                         return qbStats.reduce( function (a, b) {
                             return b[statType] == null ? a : a + b[statType];
                         }, 0);       
@@ -105,15 +94,6 @@ angular.module('qbPassTrends').factory('qbService', ['$http', '$filter',
                     var gameObj = null;
                     
                     if(!this.isEmpty(qbStats)) {
-                        //TODO be able to explain what is happening here
-                        /* Read from first line to second, and read from inside to out
-                        1.  qbStats.map returns a new array containing the value of each object statType property
-                        2.  We are then looking through that array and applying the Math.max object function to the array
-                        3.  Finally returning the largest found value of that array
-                        
-                        Line 2
-                        1. We are using the Object.prototype.find method to return the game object that contains the maxValue found in the previous step
-                        */
                         maxValue = Math.max.apply(Math,qbStats.map(function(o){return o[statType];}));
                         gameObj= qbStats.find(function(o){ return o[statType] == maxValue; });
                     } else {
