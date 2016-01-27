@@ -11,6 +11,6 @@ angular.module('qbPassTrends')
   .directive('bestStats', function() {
     return {
         restrict: 'E',
-        templateUrl: '/views/partials/bestStats.html'
+        templateUrl: 'views/partials/bestStats.html'
     };
   });
